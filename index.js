@@ -22,12 +22,15 @@
 		return hash;
 	}
 
-	function stringify(o) {
+	function stringify(o, replacer, space) {
 
 		var refs = {};
 	
 		var str = JSON.stringify(o, function (key, value) {
-	
+			console.log(this)
+			if(replacer) {
+				return replacer.call(this, key, value)
+			}
 			if(value) {
 				if(value.constructor == RegExp || value.constructor == Function) {
 					var id = hashCode(value.constructor.prototype.toString.call(value))
@@ -38,10 +41,8 @@
 				}
 			}
 			return value;
-		})
+		}, space);
 
-		console.log(refs)
-	
 		return str.replace(/"__(-?[a-z0-9]+)__"/g, function(x, hash) {
 			if(!refs.hasOwnProperty(hash)) {
 				return x;

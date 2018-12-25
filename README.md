@@ -1,12 +1,16 @@
 
-# js-full
+# stringify-parse
 ### A tool like JSON.stringify and JSON.parse but can convert the type Function and RegExp in the js object.
 
-.eg
-~~~javascript
+Install
+~~~bash
+npm install stringify-parse
+~~~
 
+eg.
+~~~javascript
 let o = {
-  name: 'js-full',
+  name: 'stringify-parse',
   method: function() {
     console.log('this is a function');
   },
@@ -20,11 +24,11 @@ Now, I want to convert the object into string, if we use JSON.stringify, it will
 {"name":"demo","reg":{}}
 ~~~
 
-This is not what we want. Now we can use the tool js-full
+This is not what we want. Now we can use the tool stringify-parse
 
 ~~~javascript
-const jsfull = require('js-full');
-console.log(jsfull(o));
+const stringifyParse = require('stringify-parse');
+console.log(stringifyParse(o));
 ~~~
 
 output:
@@ -34,11 +38,11 @@ output:
   },"reg":/\w+/
 ~~~
 
-Then we can use the method jsfull.parse to convert the json string into object.
+Then we can use the method stringifyParse.parse to convert the json string into object.
 ~~~javascript
 let str = `{"name":"demo","method":function() {
     console.log('this is a function');
   },"reg":/\w+/
  `;
-console.log(jsfull.parse(str));
+console.log(stringifyParse.parse(str));
 ~~~

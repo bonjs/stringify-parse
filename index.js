@@ -27,7 +27,6 @@
 		var refs = {};
 	
 		var str = JSON.stringify(o, function (key, value) {
-			console.log(this)
 			if(replacer) {
 				return replacer.call(this, key, value)
 			}

@@ -1,6 +1,6 @@
 
 # stringify-parse
-### A tool like JSON.stringify and JSON.parse but can convert the type Function and RegExp in the js object.
+### A tool like JSON.stringify and JSON.parse but could convert the type Function and RegExp in the js object.
 
 Install
 ~~~bash

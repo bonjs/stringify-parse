@@ -1,5 +1,5 @@
 
-# stringify-parse
+# stringify-parse [![Build Status](https://travis-ci.org/bonjs/stringify-parse.svg?branch=master)](https://travis-ci.org/bonjs/stringify-parse)
 ### A tool like JSON.stringify and JSON.parse but could convert the type Function and RegExp in the js object.
 
 Install

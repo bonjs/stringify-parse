@@ -1,6 +1,6 @@
 {
   "name": "stringify-parse",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A tool like JSON.string and JSON.parse but can convert the type Function and RegExp in js object ",
   "main": "index.js",
   "scripts": {

@@ -46,3 +46,17 @@ let str = `{"name":"demo","method":function() {
  `;
 console.log(stringifyParse.parse(str));
 ~~~
+
+And you can use the window variable stringifyParse or jsfull like this:
+~~~
+<script src="stringify-parse.js"></script>
+
+<script>
+  let str = `{"name":"demo","method":function() {
+    console.log('this is a function');
+  },"reg":/\w+/
+ `;
+console.log(stringifyParse.parse(str));
+console.log(jsfull.parse(str));
+</script>
+~~~

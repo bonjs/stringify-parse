@@ -48,7 +48,7 @@ console.log(stringifyParse.parse(str));
 ~~~
 
 And you can use the window variable stringifyParse or jsfull like this:
-~~~
+~~~html
 <script src="stringify-parse.js"></script>
 
 <script>

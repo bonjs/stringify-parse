@@ -7,7 +7,7 @@
 	} else if (typeof exports === 'object') {
 		module.exports = factory();
 	} else {
-		root.jsfull = factory();
+		root.stringifyParse = root.jsfull = factory();
 	}
 })(this, function () {
 
